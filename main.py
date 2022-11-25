@@ -66,7 +66,7 @@ class Login(QWidget):
 class Main(QWidget):
     entireSeat = input() # 가려고 하는 장소의 좌석 수, 서버에서 받아와야 함
     unableSeat = input() # 앉을 수 없는 좌석 수, 서버에서 받아와야 함
-    Seat = Seat(int(unableSeat), int(entireSeat))
+    Seat = Seat(int(unableSeat), int(entireSeat)) # 이거 실행하면 67,68,69 부분 때문에 실행이 안 됨
     switch_window = pyqtSignal(str)
 
     def __init__(self, parent=None):
@@ -77,9 +77,8 @@ class Main(QWidget):
         # Digit Buttons
         roomLayout = QGridLayout()
         roomlist = [
-            "미래관 449호 : ", "공학관 ***호 : ", "법학관 스터디카페 : ",
-            "00관 ***호 : ", "00관 ***호 : ", "00관 ***호 : ",
-            "00관 ***호 : ", "00관 ***호 : ", "00관 ***호 : ",
+            "미래관 449호 : ", "복지관 317호 : ", "법학관 스터디카페 : ",
+            "복지관 303호 : ", "복지관 306호 : ", "복지관 311호 : ",
         ]
         r = 0; c = 0
         for btnText in roomlist:
